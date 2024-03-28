@@ -1,0 +1,63 @@
+.precaution{
+    padding: 10px 10%;
+}
+.precaution h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 45px;
+  }
+  
+  .precaution h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: underline;
+  }
+  
+  .precaution p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .precaution p a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .precaution p a:hover{
+    color: blue;
+  }
+  .precaution strong {
+    font-weight: bold;
+  }
+  
+  /* Additional styles for specific elements */
+  .precaution p strong {
+    color: #0056b3; /* Dark blue for strong elements within paragraphs */
+  }
+  
+  .precaution p > br {
+    display: none; /* Hide line breaks within paragraphs */
+  }
+  
+  /* Custom styles for the list items */
+  .precaution ul {
+    padding-left: 20px;
+  }
+  
+  .precaution ul li {
+    list-style-type: disc;
+  }
+  
+  .precaution ul ul {
+    margin-top: 5px;
+  }
+  
+  .precaution ul ul li {
+    list-style-type: circle;
+  }

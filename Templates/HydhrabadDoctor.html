@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Doctors.css')}}">
+    <title>Document</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container container">
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </div>
+        <ul class="menu-items">
+          <li><a href="/">Home</a></li>
+            <li><a href="/predict">Predict</a></li>
+            <li><a href="/precaution">Precautions</a></li>
+            <li><a href="/information">Hosipital Information</a></li>
+        </ul>
+    </div>
+</nav>
+<br/>
+<br/>
+<br/>
+
+    <div class="contain">
+
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Hyderabad Doctors/1.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. S.V.S.S Prasad</h3>
+            <p>Medical Oncologist, Hyderabad, India
+              Consultant, 39 years of experience ,</p>
+               <p>APOLLO HOSPITALS, JUBILEE HILLS HYDERABAD</p>
+          </div>
+        </div>
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Hyderabad Doctors/2.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. Srinivas Chakravarthy Gummaraju </h3>
+            <p>Medical Oncologist, Hyderabad, India
+              Director, 19 years of experience ,  </p>
+             <p>APOLLO HOSPITALS, JUBILEE HILLS HYDERABAD</p>
+          </div>
+        </div>
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Hyderabad Doctors/3.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. Vijay Anand Reddy </h3>
+            <p>Medical Oncologist, Hyderabad, India
+              Director, 30 years of experience ,</p>
+               <p> APOLLO HOSPITALS, JUBILEE HILLS HYDERABAD</p>
+          </div>
+        </div>
+      
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Hyderabad Doctors/4.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. A. V. S. Suresh </h3>
+            <p>Medical Oncologist, Hyderabad, India
+              Consultant, 12 years of experience ,</P>
+             <p>CONTINENTAL HOSPITALS, HYDERABAD</p>
+          </div>
+        </div>
+
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Hyderabad Doctors/5.png')}}"  alt="Doctor"/>
+            <h3>Dr. Sainath Bhethanabhotla</h3>
+            <p>Medical Oncologist, Hyderabad, India</p>
+              <p>Consultant, 10 years of experience ,</p>
+          </div>
+        </div>
+
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Hyderabad Doctors/6.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. Sudha Sinha </h3>
+            <p>Medical Oncologist, Hyderabad, India</p>
+              <p>HOD, 13 years of experience , </p>
+          </div>
+        </div>
+      
+      </div>
+      <footer>
+        <p>Reva University</p>
+        <img src="{{url_for("static",filename='Images/college logo.png')}}" alt="College Logo" class="college-logo">
+        <div class="footer-links">
+            <a href="report.pdf" target="_blank">Report</a>
+            <a href="published-paper.pdf" target="_blank">Published Paper</a>
+            <a href="https://github.com/yourproject" target="_blank">GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>

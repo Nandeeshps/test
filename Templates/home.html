@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Page Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="path_to_your_image.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+            Your Site Name
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/predict">Predictions</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/precaution"class="nav-link">Precautions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/information">Hospital Info</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container mt-5 pt-5">
+      <h1 class="text-center">Skin Cancer Detection Using CNN</h1>
+      <p class="mt-4">
+        Skin cancer, a widespread and potentially fatal affliction, arises from the uncontrolled proliferation of skin cells. It encompasses various types, such as basal cell carcinoma, squamous cell carcinoma, and melanoma, each presenting distinct characteristics and degrees of severity. Prolonged exposure to ultraviolet (UV) radiation, whether from the sun or artificial sources like tanning beds, significantly contributes to its development. The consequences of skin cancer can range from seemingly benign lesions or irregular skin spots to severe ramifications like metastasis. Given its potential impact on health, it is imperative to comprehend the nuances of skin cancer and recognize its signs promptly.      </p>
+      <br/>
+      <p>Early detection of skin cancer is paramount for successful treatment outcomes and mitigating potential complications. Identifying skin cancer in its incipient stages allows for interventions that can prevent the cancer from spreading and becoming more aggressive. Leveraging technology in skin cancer detection has proven instrumental in enhancing diagnostic capabilities. Advanced imaging techniques, including dermoscopy and computer-aided diagnostic systems, contribute to the precision and efficiency of the diagnostic process. The integration of technology in skin cancer detection not only aids in accurate identification but also facilitates the rapid analysis of vast datasets, expediting the diagnostic timeline and ultimately improving patient outcomes.</p>
+        <h2 class="mt-4">Types of Skin Cancer</h2>
+      <ul class="mt-2">
+          <li>Melanoma</li>
+          <li>Basal cell carcinoma</li>
+          <li>Squamous cell carcinoma</li>
+          <li>Actinic keratosis</li>
+          <li>Merkel cell carcinoma</li>
+          <li>Cutaneous (skin) lymphoma</li>
+          <li>Kaposi sarcoma</li>
+          <li>Sebaceous gland carcinoma</li>
+      </ul>
+      <p class="mt-4">
+        In the realm of technological advancements, Convolutional Neural Networks (CNNs) stand out as a transformative force in the field of skin cancer detection. CNNs are a subtype of deep learning algorithms specifically tailored for image recognition tasks. Their architecture enables the automatic learning and extraction of hierarchical features from images, making them adept at deciphering complex patterns within dermatoscopic images. This capability proves invaluable in discerning subtle irregularities indicative of malignant growth. By processing large datasets of skin lesion images, CNNs enhance the accuracy and efficiency of skin cancer diagnosis. The integration of CNNs into skin cancer detection not only bolsters diagnostic capabilities but also streamlines the decision-making process for healthcare professionals, potentially leading to more timely and effective interventions. The fusion of cutting-edge technology, like CNNs, with dermatological practices heralds a promising era in the early diagnosis and treatment of skin cancer, underscoring the immense potential for technology to positively impact healthcare outcomes.      </p>
+  </div>
+
+  <div class="container mt-5">
+        <h2>About Our Work</h2>
+        <p class="mt-4">
+            In our pursuit of advancing skin cancer detection, we've successfully developed a predictive model utilizing Convolutional Neural Networks (CNNs) to identify various skin cancer types, including basal cell carcinoma, squamous cell carcinoma, and melanoma. Seamlessly integrated into a user-friendly web application using the Flask framework, our model empowers users to upload skin lesion images through a simple interface and obtain predictions by clicking the "Predict" button. Leveraging Flask's efficiency, the application orchestrates the loading of the pre-trained skin cancer prediction model, swiftly processing the uploaded images and providing prompt insights into the nature of the skin lesion. This innovative approach, fostering a convergence of cutting-edge technology and user-centric design, signifies our commitment to advancing skin cancer diagnosis, promoting accessibility, and facilitating early intervention for the betterment of public health.        </p>
+            <button>Know more</button>
+    </div>
+
+    <!-- Workflow Section -->
+    <div class="container mt-5">
+        <h2>Benfits of Our Projects</h2>
+        <div class="mt-4">
+            Quick Prediction
+            Early Indication of Disease
+            Doctors Information of Particular Disease
+            Medicine Information
+            
+            <!-----<img src="path_to_your_animated_flowchart.gif" alt="Flowchart">----!>
+        </div>
+    </div>
+
+    <!-- Predict Section -->
+    <div class="container mt-5">
+        <h2>Predict</h2>
+        <div class="mt-4">
+            <!-- Predict Button -->
+            <a href="{{ url_for('predict') }}" class="btn btn-primary">Predict</a>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer bg-light mt-5 py-3">
+        <div class="container text-center">
+            <span class="text-muted">Copyright &copy; 2022 Your Name</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

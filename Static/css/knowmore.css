@@ -1,0 +1,17 @@
+.know{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 10%;
+}
+.know .work{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.know  h1{
+    font-size: 40px;
+}

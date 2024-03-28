@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Hospitals and Doctors Information</title>
+</head>
+<body>
+    <nav class="navbar">
+        <header>
+            <input type="checkbox" id="menu-toggle">
+            <div class="hamburger-lines">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="predict.html">Predict</a></li>
+                <li><a href="precaution.html">Precautions</a></li>
+                <li><a href="information.html">Hospital Information</a></li>
+            </ul>
+        </header>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <form method="post" action="{{ url_for('information') }}">
+        <div class="location-selector">
+            <label for="location">Select Location:</label>
+            <select id="location" name="location">
+                <option value="bangalore">Bangalore</option>
+                <option value="chennai">Chennai</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="mumbai">Mumbai</option>
+            </select>
+            <button type="submit">Get Information</button>
+        </div>
+    </form>
+
+    <footer>
+        <p>Reva University</p>
+        <img src="{{ url_for('static', filename='Images/college logo.png') }}" alt="College Logo" class="college-logo">
+        <div class="footer-links">
+            <a href="report.pdf" target="_blank">Report</a>
+            <a href="published-paper.pdf" target="_blank">Published Paper</a>
+            <a href="https://github.com/yourproject" target="_blank">GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>

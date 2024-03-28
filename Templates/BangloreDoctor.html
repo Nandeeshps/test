@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Doctors.css')}}">
+    <title>Document</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container container">
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </div>
+        <ul class="menu-items">
+            <li><a href="/">Home</a></li>
+            <li><a href="/predict">Predict</a></li>
+            <li><a href="/precaution">Precautions</a></li>
+            <li><a href="/information">Hosipital Information</a></li>
+        </ul>
+    </div>
+</nav>
+<br/>
+<br/>
+<br/>
+
+    <div class="contain">
+
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Banglore Doctors/1.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. Vijay Agarwal </h3>
+            <p>Medical Oncologist, Bangalore, India
+              Senior Consultant, 18 years of experience , </p>
+               <p>ASTER RV HOSPITAL (J P NAGAR) BANGALORE</p>
+          </div>
+        </div>
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Banglore Doctors/2.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. Amit Rauthan</h3>
+            <p>Consultant, 18 years of experience , </p>
+             <p> MANIPAL HOSPITAL (OLD AIRPORT ROAD) BANGALORE</p>
+          </div>
+        </div>
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Banglore Doctors/3.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. C.N Patil</h3>
+            <p>Medical Oncologist, Bangalore, India
+              Consultant, 10 years of experience , </p>
+               <p>APOLLO HOSPITAL, SESHADRIPURAM</p>
+          </div>
+        </div>
+      
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Banglore Doctors/4.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. Kakoli Lahkar</h3>
+            <p>Medical Oncologist, Bangalore, India
+              Consultant, 12 years of experience , </P>
+             <p>  MANIPAL HOSPITAL (OLD AIRPORT ROAD) BANGALORE</p>
+          </div>
+        </div>
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Banglore Doctors/5.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. Vishwanath S.</h3>
+            <p>Medical Oncologist, Bangalore, India
+              Consultant, 6 years of experience , </p>
+              <p> APOLLO SPECIALITY HOSPITAL, JAYANAGAR</p>
+          </div>
+        </div>
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Banglore Doctors/6.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. Vivek Belathur</h3>
+            <p>Medical Oncologist, Bangalore, India
+              Consultant, 15 years of experience , </p>
+              <p> FORTIS HOSPITAL, BANGALORE (BANNERGHATTA ROAD)</p>
+          </div>
+        </div>
+      
+      </div>
+      <footer>
+        <p>Reva University</p>
+        <img src="{{url_for("static",filename='Images/college logo.png')}}" alt="College Logo" class="college-logo">
+        <div class="footer-links">
+            <a href="report.pdf" target="_blank">Report</a>
+            <a href="published-paper.pdf" target="_blank">Published Paper</a>
+            <a href="https://github.com/yourproject" target="_blank">GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>

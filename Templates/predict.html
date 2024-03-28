@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection of Skin Cancer Type</title>
+    <!-- Add your CSS and JavaScript links here -->
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Navbar content -->
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Detection of Skin Cancer Type</h1>
+        <p class="mt-4">Follow these steps to detect the type of skin cancer:</p>
+        <ol>
+            <li>Upload an image of the skin lesion.</li>
+            <li>Click on "Submit".</li>
+            <li>Get the type of skin cancer.</li>
+        </ol>
+        
+        <!-- Form for Image Upload -->
+        <form action="/result" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="imageUpload">Upload Image:</label>
+                <input type="file" class="form-control-file" id="imageUpload" name="imageUpload" required>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-light mt-5 py-3">
+        <div class="container text-center">
+            <span class="text-muted">Copyright &copy; 2022 Your Name</span>
+        </div>
+    </footer>
+</body>
+</html>

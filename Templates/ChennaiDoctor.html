@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Doctors.css')}}">
+    <title>Document</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container container">
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </div>
+        <ul class="menu-items">
+          <li><a href="/">Home</a></li>
+          <li><a href="/predict">Predict</a></li>
+          <li><a href="/precaution">Precautions</a></li>
+          <li><a href="/information">Hosipital Information</a></li>
+        </ul>
+    </div>
+</nav>
+<br/>
+<br/>
+<br/>
+
+    <div class="contain">
+
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Chennai Doctors/1.jpg')}}"  alt="Doctor"/>
+            <h3>Dr Naveen Ravel </h3>
+            <p>Medical Oncologist, Chennai, India
+              Consultant, 33 years of experience , </p>
+               <p>APOLLO CANCER HOSPITAL, CHENNAI</p>
+          </div>
+        </div>
+
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Chennai Doctors/2.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. Jose Easow</h3>
+            <p>Medical Oncologist, Chennai, India
+              Consultant, 24 years of experience ,  </p>
+             <p> APOLLO CANCER HOSPITAL, CHENNAI</p>
+          </div>
+        </div>
+
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Chennai Doctors/3.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. Sankar Srinivasan</h3>
+            <p>Medical Oncologist, Chennai, India
+              Senior Consultant, 28 years of experience, </p>
+               <p>APOLLO CANCER HOSPITAL, CHENNAI</p>
+          </div>
+        </div>
+      
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Chennai Doctors/4.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. Raja T</h3>
+            <p>Medical Oncologist, Chennai, India
+              Senior Consultant, 20 years of experience ,</P>
+             <p>APOLLO CANCER HOSPITAL, CHENNAI</p>
+          </div>
+        </div>
+
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Chennai Doctors/5.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. Kalaichelvi </h3>
+            <p>Medical Oncologist, Chennai, India
+              Consultant, 24 years of experience , </p>
+              <p>APOLLO CANCER HOSPITAL, CHENNAI</p>
+          </div>
+        </div>
+
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Chennai Doctors/6.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. Ranjan Kumar Mohapatra</h3>
+            <p>Medical Oncologist, Chennai, India
+              Senior Consultant, 25 years of experience ,</p>
+              <p> SIMS HOSPITAL, VADAPALANI, CHENNAI</p>
+          </div>
+        </div>
+      
+      </div>
+      <footer>
+        <p>Reva University</p>
+        <img src="{{url_for("static",filename='Images/college logo.png')}}" alt="College Logo" class="college-logo">
+        <div class="footer-links">
+            <a href="report.pdf" target="_blank">Report</a>
+            <a href="published-paper.pdf" target="_blank">Published Paper</a>
+            <a href="https://github.com/yourproject" target="_blank">GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>

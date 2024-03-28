@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Cancer Precautions</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/knowmore.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css')}}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#">Home</a></li>
+                <li><a href="predict.html">Predict</a></li>
+                <li><a href="precaution.html">Precautions</a></li>
+                <li><a href="information.html">Hosipital Information</a></li>
+            </ul>
+<!--             <h1 class="logo">Navbar</h1> -->
+        </div>
+    </nav>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <div class='know'>
+
+        <div class="work">
+           <h1> Work </h1>
+           <p>In our pursuit of advancing skin cancer detection, we have successfully developed a predictive model designed to identify different types of skin cancer. This model leverages Convolutional Neural Networks (CNNs), a state-of-the-art deep learning algorithm specialized in image recognition tasks. By training the model on a diverse dataset of dermatoscopic images, it has acquired the ability to discern intricate patterns and anomalies associated with various skin cancer types, including basal cell carcinoma, squamous cell carcinoma, and melanoma.
+        </p>
+           <p>To make this powerful tool accessible to users, we have seamlessly integrated the skin cancer prediction model into a user-friendly web application using the Flask framework. Flask, a lightweight and efficient web framework for Python, provides the backbone for our application, facilitating a smooth user experience. The integration allows users to upload skin lesion images through a simple and intuitive interface. Upon uploading the image, users can initiate the prediction process by clicking on the "Predict" button.
+        </p>
+           <p>Behind the scenes, our Flask-based web application orchestrates the loading of the pre-trained skin cancer prediction model. Once the model processes the uploaded image, it swiftly generates predictions regarding the type of skin cancer present. The results are then promptly displayed on the user interface, providing valuable insights into the nature of the skin lesion. This user-friendly approach enables individuals, including healthcare professionals and the general public, to quickly assess the likelihood of skin cancer without the need for intricate diagnostic procedures.
+        </p>
+           <p>The integration of our skin cancer prediction model with the Flask framework not only enhances accessibility but also fosters widespread adoption. Users can now conveniently leverage our predictive capabilities through a web-based platform, promoting early detection and timely intervention. This innovative approach signifies a convergence of cutting-edge technology and user-centric design, reinforcing our commitment to making strides in the realm of skin cancer diagnosis for the betterment of public health.
+        </p>
+    </div>
+
+    <div class='accuracy'>
+        <h1>Accuracy</h1>
+    </div>
+    
+    <div class="workflow">
+        <h1>Workflow</h1>
+    </div>
+    
+    <div class='conclusion'>
+        <h1>Conclusion</h1>
+    </div>
+</div>
+    <footer>
+        <p>Reva University</p>
+        <img src="{{url_for("static",filename='Images/college logo.png')}}" alt="College Logo" class="college-logo">
+        <div class="footer-links">
+            <a href="report.pdf" target="_blank">Report</a>
+            <a href="published-paper.pdf" target="_blank">Published Paper</a>
+            <a href="https://github.com/yourproject" target="_blank">GitHub</a>
+        </div>
+    </footer>
+    
+</body>
+</html>

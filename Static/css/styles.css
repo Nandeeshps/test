@@ -1,0 +1,371 @@
+/* 
+<section class="credits">
+        <h1>Credits</h1>
+        <br/>
+        <br/>
+        <div class="card">
+            <div class="profileCard">
+              <img src="" alt="Profile"/>
+              <h2>Name</h2>
+              <p>about</p>
+              <div class='contact'>
+              <a href="#">Linked-In</a>
+              <a href="#">Email</a>
+              <a href="#">Github</a>
+            </div>
+              </div>
+            <div class="profileCard">
+                <img src="{{url_for('static',filename='Images/WhatsApp Image 2023-10-04 at 22.29.01_6a856422.jpg')}}"  alt="Profile"/>
+              <h2>NANDEESH P S</h2>
+              <p>"I am interested in both web and game development, and I am passionate about creating immersive experiences and exploring the latest technologies in these areas."</p>
+              <div class='contact'>
+              <a href="https://www.linkedin.com/in/nandish-p-s-44a11a257/">Linked-In</a>
+              <a href="mailto:nandeeshps17@gmail.com">Email</a>
+              <a href="https://github.com/Nandeeshps">Github</a>
+              </div>
+            </div>
+            <div class="profileCard">
+                <img src="" alt="Profile"/>
+              <h2>Name</h2>
+              <p>"about"</p>
+              <div class='contact'>
+              <a href="#">Linked-In</a>
+              <a href="#">Email</a>
+              <a href="#">Github</a>
+                </div>
+            </div>
+            <div class="profileCard">
+              <img src="" alt="Profile"/>
+              <h2>Name</h2>
+              <p>about</p>
+              <div class='contact'>
+              <a href="#">Linked-In</a>
+              <a href="#">Email</a>
+              <a href="#">Github</a>
+            </div>
+              </div>
+    </section> */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #88bdbc;
+   
+}
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines{
+    display: none;
+}
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+}
+
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100vw;
+    background: #254E58;
+    color: white;
+    opacity: 0.85;
+    z-index: 100;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+.menu-items{
+    order: 2;
+    display: flex;
+}
+
+
+
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover{
+    color: #117964;
+}
+
+@media (max-width: 768px){
+    .navbar{
+        opacity: 0.95;
+    }
+
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburger-lines{
+        display: block;
+    }
+
+    .navbar-container{
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+
+    .navbar-container input[type="checkbox"]{
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .navbar-container .hamburger-lines{
+        display: block;
+        height: 28px;
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar-container .hamburger-lines .line{
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #333;
+    }
+    
+    .navbar-container .hamburger-lines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line2{
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .menu-items{
+        padding-top: 100px;
+        background: #fff;
+        height: 100vh;
+        max-width: 300px;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 40px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow:  5px 0px 10px 0px #aaa;
+        overflow: scroll;
+    }
+
+    .navbar .menu-items li{
+        margin-bottom: 1.8rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .logo{
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 2.5rem;
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .menu-items{
+        transform: translateX(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        transform: scaleY(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+
+}
+
+@media (max-width: 500px){
+    .navbar-container input[type="checkbox"]:checked ~ .logo{
+        display: none;
+    }
+}
+
+ .padd{
+    padding: 10px 5%;
+}
+
+h1 {
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+}
+p {
+    padding: 1%;
+    line-height: 1.6;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Project */
+.project .padd p{
+    text-align: center;
+}
+.project button{
+     padding: 20px;
+     border-radius: 5px;
+     margin-left: 40vw;
+    }
+    .project button:hover{
+        background-color: #555;
+        border:2px solid black;
+       }
+.project button a{
+    text-decoration: none;
+    color: white;
+}
+section {
+    margin-top: 20px;
+}
+
+/* credits */
+.credits {
+    font-weight: bold;
+}
+.credits .card{
+    display:flex;
+     align-items: center;
+     justify-content: center;
+     gap: 30px;
+   }
+   .credits .card .profileCard{
+     width: 20vw;
+     height: 50vh;
+     background: #fff;
+     border: 3px solid;
+     display: flex;
+     flex-direction: column;
+  justify-content: center;
+  align-items: center;
+     border-radius: 10px;
+     gap: 15px;
+   }
+   .credits .card .profileCard h2{
+       text-align: center;
+   }
+   .credits .card .profileCard p{
+    margin-left: 15px;
+    margin-right: 15px;
+    font-style:oblique;
+}
+   .credits .card .profileCard img{
+    width: 10vw;
+    height: 20vh;
+    border-radius: 50%;
+    object-fit: cover;
+   }
+   .credits  .card .profileCard .contact{
+     display: flex;
+     gap: 20px;
+     align-items: center;
+     justify-content: center;
+   }
+   .credits .card .profileCard .contact a{
+     text-decoration: none;
+     color:white;
+   }
+   .credits  .card .profileCard .contact a:hover{
+     color: blue;
+     text-decoration: underline;
+   }
+
+/* Benfits */
+.benfits{}
+.benfits .list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* footer */
+footer {
+    margin-top: 30px;
+    padding: 15px;
+    background: #254E58;
+    color: #fff;
+    text-align: center;
+}
+
+.college-logo {
+    max-width: 100px; /* Adjust the max-width as needed */
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+
+.location-selector {
+    text-align: center;
+    margin-top: 50px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+select {
+    padding: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}

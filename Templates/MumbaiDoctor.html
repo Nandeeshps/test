@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Doctors.css')}}">
+    <title>Document</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container container">
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </div>
+        <ul class="menu-items">
+          <li><a href="/">Home</a></li>
+          <li><a href="/predict">Predict</a></li>
+          <li><a href="/precaution">Precautions</a></li>
+          <li><a href="/information">Hosipital Information</a></li>
+        </ul>
+    </div>
+</nav>
+<br/>
+<br/>
+<br/>
+
+    <div class="contain">
+
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Mumbai Doctors/1.jpg')}}"  alt="Doctor"/>
+            <h3>Prof. Dr. Suresh H. Advani </h3>
+            <p>Medical Oncologist, Mumbai, India
+                Senior Consultant, 43 years of experience , </p>
+               <p>NANAVATI SUPER SPECIALTY HOSPITAL, MUMBAI</p>
+          </div>
+        </div>
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Mumbai Doctors/2.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. Dattatreyudu Nori</h3>
+            <p>Medical Oncologist, Mumbai, India</p>
+             <p>Director, 43 years of experience ,</p>
+          </div>
+        </div>
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Mumbai Doctors/3.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. Maheboob Basade</h3>
+            <p>Medical Oncologist, Mumbai, India
+                Head of Department, 26 years of experience , </p>
+               <p>SAIFEE HOSPITAL, MUMBAI</p>
+          </div>
+        </div>
+      
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Mumbai Doctors/4.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. Ganapathi Bhat M</h3>
+            <p>Medical Oncologist, Mumbai, India
+                Consultant, 25 years of experience ,</P>
+             <p>SIR HN RELIANCE FOUNDATION HOSPITAL & RESEARCH CENTRE, MUMBAI</p>
+          </div>
+        </div>
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Mumbai Doctors/5.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. Boman Nariman Dhabhar </h3>
+            <p>Medical Oncologist, Mumbai, India
+                Senior Consultant, 30 years of experience ,</p>
+              <p>FORTIS HOSPITAL, MULUND, MUMBAI</p>
+          </div>
+        </div>
+        <div class="doctors">
+          <div class="doctor">
+            <img src="{{url_for('static',filename='Images/Mumbai Doctors/6.jpg')}}"  alt="Doctor"/>
+            <h3>Dr. Uma Dangi </h3>
+            <p>Medical Oncologist, Mumbai, India
+                Consultant, 13 years of experience , </p>
+              <p>FORTIS HOSPITAL, MULUND, MUMBAI</p>
+          </div>
+        </div>
+      
+      </div>
+      <footer>
+        <p>Reva University</p>
+        <img src="{{url_for("static",filename='Images/college logo.png')}}" alt="College Logo" class="college-logo">
+        <div class="footer-links">
+            <a href="report.pdf" target="_blank">Report</a>
+            <a href="published-paper.pdf" target="_blank">Published Paper</a>
+            <a href="https://github.com/yourproject" target="_blank">GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>
