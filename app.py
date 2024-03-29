@@ -4,7 +4,25 @@ from keras.preprocessing import image
 import numpy as np
 
 app = Flask(__name__)
-model = load_model('skin_cancer_detection_model.h5') # Load your trained model
+
+def download_file_from_github(url, save_as):
+    response = requests.get(url)
+    with open(save_as, 'wb') as f:
+        f.write(response.content)
+
+
+url = 'https://github.com/Nandeeshps/Major-project/raw/main/skin_cancer_detection_model.h5'
+
+# Local filename to save the model file as
+save_as = 'model.h5'
+
+# Check if the model file already exists, if not download it
+if not os.path.isfile(save_as):
+    download_file_from_github(url, save_as)
+
+# Load the model
+model = load_model(save_as)
+
 
 @app.route('/', methods=['GET','POST'])
 def home():
