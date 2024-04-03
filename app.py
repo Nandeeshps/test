@@ -1,107 +1,41 @@
-from flask import Flask, request, render_template, redirect, url_for
-from keras.models import load_model
-from keras.preprocessing import image
+from flask import Flask, request, render_template
+from tensorflow.keras.models import load_model
+from PIL import Image
 import numpy as np
 
 app = Flask(__name__)
 
-def download_file_from_github(url, save_as):
-    response = requests.get(url)
-    with open(save_as, 'wb') as f:
-        f.write(response.content)
+# Load your trained model
+model = load_model('model.h5')
 
-
-url = 'https://github.com/Nandeeshps/Major-project/raw/main/skin_cancer_detection_model.h5'
-
-# Local filename to save the model file as
-save_as = 'model.h5'
-
-# Check if the model file already exists, if not download it
-if not os.path.isfile(save_as):
-    download_file_from_github(url, save_as)
-
-# Load the model
-model = load_model(save_as)
-
-
-@app.route('/', methods=['GET','POST'])
+@app.route('/', methods=['GET'])
 def home():
-    return render_template('home.html')
+    # Render a home page with an upload form
+    return render_template('index.html')
 
-@app.route('/predict', methods=['GET'])
+@app.route('/predict', methods=['POST'])
 def predict():
-    return render_template('predict.html')
-
-@app.route('/precaution', methods=['GET'])
-def precaution():
-    return render_template('precaution.html')
-
-@app.route('/information', methods=['GET', 'POST'])
-def information():
-    if request.method == 'POST':
-        selected_location = request.form['location']
-
-        # Redirect to the page corresponding to the selected location
-        if selected_location == 'bangalore':
-            return redirect(url_for('bangalore_page'))
-        elif selected_location == 'chennai':
-            return redirect(url_for('chennai_page'))
-        elif selected_location == 'hyderabad':
-            return redirect(url_for('hyderabad_page'))
-        elif selected_location == 'mumbai':
-            return redirect(url_for('mumbai_page'))
-
-    return render_template('information.html')
-
-@app.route('/bangalore', methods=['GET'])
-def bangalore_page():
-    return render_template('BangloreDoctor.html')
-
-@app.route('/chennai', methods=['GET'])
-def chennai_page():
-    return render_template('ChennaiDoctor.html')
-
-
-@app.route('/hyderabad', methods=['GET'])
-def hyderabad_page():
-    return render_template('HydhrabadDoctor.html')
-
-
-@app.route('/mumbai', methods=['GET'])
-def mumbai_page():
-    return render_template('MumbaiDoctor.html')
-
-
-# Define routes for other locations similarly
-
-
-@app.route('/result', methods=['GET','POST'])
-def result():
-    if 'imageUpload' not in request.files:
+    if 'file' not in request.files:
         return 'No file part'
-    file = request.files['imageUpload']
+    file = request.files['file']
     if file.filename == '':
         return 'No selected file'
-    file.save(file.filename)
-    img = image.load_img(file.filename, target_size=(224, 224)) # Load the image
-    x = image.img_to_array(img) # Convert the image to numpy array
-    x = np.expand_dims(x, axis=0) # Add a dimension for the batch
-    x = x / 255.0 # Normalize
-    preds = model.predict(x) # Predict
-
-    # Get the class with highest probability
-    preds_class = np.argmax(preds, axis=1)
-
-    # Here you need to map the predicted class to its label
-    labels = {0: 'Melanocytic nevi', 1: 'Melanoma', 2: 'Benign keratosis', 3: 'Basal cell carcinoma', 4: 'Actinic keratoses', 5: 'Vascular lesions', 6: 'Dermatofibroma', 7: 'Squamous cell carcinoma'}
-    pred_label = labels[preds_class[0]]
-
-    # Calculate the percentage for each class
-    preds_percentage = preds[0] * 100
-    labels_list = [labels[i] for i in range(len(labels))]
-
-    # Render the result.html template and pass the prediction results
-    return render_template('result.html', prediction_label=pred_label, prediction_percentages=preds_percentage.tolist(), labels=labels_list)
+    if file:
+        # Convert the image to the correct size and format for your model
+        image = Image.open(file.stream).convert('RGB')
+        image = image.resize((224, 224))  # Example size, adjust to your model's input
+        image = np.expand_dims(image, axis=0)
+        
+        # Make a prediction
+        predictions = model.predict(image)
+        # Assuming your model returns a class index, you might need to adjust this
+        predicted_class = np.argmax(predictions, axis=1)
+        
+        # Map the predicted class index to the actual class name
+        class_names = ['Class1', 'Class2', 'Class3']  # Example class names, adjust to your model's classes
+        result = class_names[predicted_class[0]]
+        
+        return f'Predicted Skin Cancer Type: {result}'
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
+    app.run(debug=True)
